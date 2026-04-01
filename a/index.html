@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="%VITE_ASSETS_BASE_URL%favicon.ico" />
+  <title>Marriage | Ahsan & Shinta</title>
+  <meta name="description" content="Join us for the celebration of our wedding!" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marriage | Ahsan & Shinta" />
+  <meta property="og:description"
+    content="2 Juni 2026. Dengan rahmat Allah SWT, kami mengundang Anda untuk merayakan pernikahan kami." />
+  <meta property="og:image" content="/cover.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Marriage | Ahsan & Shinta" />
+  <meta property="twitter:description"
+    content="2 Juni 2026. Dengan rahmat Allah SWT, kami mengundang Anda untuk merayakan pernikahan kami." />
+  <meta property="twitter:image" content="/cover.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            display: ['Cinzel', 'serif'],
+          },
+          colors: {
+            zinc: {
+              850: '#1f1f22',
+              900: '#18181b',
+              950: '#09090b',
+            },
+            gold: {
+              50: '#fbf8eb',
+              100: '#f5efcd',
+              200: '#ebde9b',
+              300: '#dec663',
+              400: '#d4af37', // Gold-ish
+              500: '#b69129',
+            },
+            appleBlue: '#007AFF', // Keeping for accent
+          },
+          animation: {
+            'fade-in': 'fadeIn 1s ease-out forwards',
+            'slow-spin': 'spin 10s linear infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/a/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/a/index.tsx"></script>
+</body>
+
+</html>
