@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 interface LoaderProps {
   onOpen: () => void;
@@ -55,6 +57,12 @@ export const Loader: React.FC<LoaderProps> = ({ onOpen }) => {
   }, [isVideoReady]);
 
   const handleOpen = () => {
+    // Track visit
+    addDoc(collection(db, 'visits_a'), {
+      timestamp: serverTimestamp(),
+      userAgent: navigator.userAgent,
+    }).catch(console.error);
+
     // Lock scroll during animation
     document.body.style.overflow = 'hidden';
 

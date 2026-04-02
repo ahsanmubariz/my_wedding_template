@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../firebase';
 import { GeometricDivider } from './Ornaments';
 
 interface LoaderProps {
@@ -56,6 +58,13 @@ export const Loader: React.FC<LoaderProps> = ({ onOpen }) => {
     }, [isVideoReady]);
 
     const handleOpen = () => {
+        // Track visit
+        addDoc(collection(db, 'visits_s'), {
+            timestamp: serverTimestamp(),
+            userAgent: navigator.userAgent,
+        }).catch(console.error);
+
+        // Lock scroll during animation
         document.body.style.overflow = 'hidden';
 
         const tl = gsap.timeline({

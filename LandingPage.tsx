@@ -15,7 +15,7 @@ const LandingPage: React.FC = () => {
                         Welcome to
                     </span>
                     <h1 className="text-5xl md:text-7xl font-display text-gradient-gold mb-6">
-                        I-Wed Experience
+                        Shinta & Ahsan Wedding Invitation
                     </h1>
                     <p className="text-zinc-400 font-serif italic text-xl md:text-2xl max-w-2xl mx-auto">
                         Choose your preferred luxury digital invitation experience.
@@ -30,13 +30,13 @@ const LandingPage: React.FC = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative z-10">
                             <h2 className="text-3xl font-display text-zinc-100 mb-4 group-hover:text-gold-400 transition-colors">
-                                Design A
+                                Makassar Venue
                             </h2>
                             <p className="text-zinc-400 font-sans mb-8">
                                 A dark, modern, and deeply elegant single-page experience with smooth GSAP scrolling.
                             </p>
                             <span className="inline-flex items-center justify-center px-6 py-3 border border-zinc-700 rounded-full text-zinc-300 group-hover:border-gold-400 group-hover:text-gold-400 transition-colors duration-300">
-                                View Invitation A
+                                View Invitation
                                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
@@ -49,13 +49,13 @@ const LandingPage: React.FC = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative z-10">
                             <h2 className="text-3xl font-display text-zinc-100 mb-4 group-hover:text-emerald-400 transition-colors">
-                                Design S
+                                Majalengka Venue
                             </h2>
                             <p className="text-zinc-400 font-sans mb-8">
                                 A vibrant, light, Islamic-themed design featuring elegant geometry, gold inserts, and nature tones.
                             </p>
                             <span className="inline-flex items-center justify-center px-6 py-3 border border-zinc-700 rounded-full text-zinc-300 group-hover:border-emerald-400 group-hover:text-emerald-400 transition-colors duration-300">
-                                View Invitation S
+                                View Invitation
                                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
@@ -67,7 +67,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             <footer className="absolute bottom-8 text-center w-full text-zinc-600 font-sans text-sm z-10">
-                &copy; {new Date().getFullYear()} The I-Wed Experience. All rights reserved.
+                &copy; {new Date().getFullYear()} Ahsan Jipiti. All rights reserved.
             </footer>
         </main>
     );
