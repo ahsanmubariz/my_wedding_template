@@ -12,12 +12,11 @@ interface RSVPModalProps {
 
 export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
     const [step, setStep] = useState(0);
+    const queryParams = new URLSearchParams(window.location.search);
+    const recipientName = queryParams.get('name');
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        attending: 'yes',
-        guests: 1,
-        dietary: ''
+        name: recipientName || '',
+        guests: 1
     });
 
     const modalRef = useRef<HTMLDivElement>(null);
@@ -71,11 +70,6 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
         );
     }, { dependencies: [step] });
 
-    const handleNext = () => {
-        if (step === 0 && !formData.name) return;
-        setStep(prev => prev + 1);
-    };
-
     const handleSubmit = async () => {
         try {
             await addDoc(collection(db, 'rsvpv2'), {
@@ -83,7 +77,7 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
                 timestamp: serverTimestamp(),
                 submittedAt: new Date().toISOString()
             });
-            setStep(4);
+            setStep(1);
         } catch (error) {
             console.error("Error adding document: ", error);
             alert("Terjadi kesalahan saat menyimpan data. Silakan coba lagi.");
@@ -136,14 +130,14 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
                 <div className="p-8 overflow-y-auto custom-scrollbar min-h-[300px] bg-cream-50">
                     <div ref={formRef}>
 
-                        {/* STEP 0: NAME */}
+                        {/* STEP 0: FORM */}
                         {step === 0 && (
                             <div className="space-y-6">
                                 <div className="text-center mb-8">
-                                    <h2 className="text-3xl font-script text-emerald-700 mb-2">Siapakah Anda?</h2>
-                                    <p className="text-charcoal-700/60 text-sm font-light">Mohon masukkan nama lengkap sesuai undangan.</p>
+                                    <h2 className="text-3xl font-script text-emerald-700 mb-2">Konfirmasi Kehadiran</h2>
+                                    <p className="text-charcoal-700/60 text-sm font-light">Mohon masukkan nama dan jumlah tamu.</p>
                                 </div>
-                                <div className="space-y-4">
+                                <div className="space-y-6">
                                     <div className="group">
                                         <label className="block text-xs uppercase tracking-[0.1em] text-charcoal-700/60 mb-2 ml-2">Nama Lengkap</label>
                                         <input
@@ -155,93 +149,30 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
                                             autoFocus
                                         />
                                     </div>
-                                    <div className="group">
-                                        <label className="block text-xs uppercase tracking-[0.1em] text-charcoal-700/60 mb-2 ml-2">Alamat Email</label>
-                                        <input
-                                            type="email"
-                                            value={formData.email}
-                                            onChange={e => setFormData({ ...formData, email: e.target.value })}
-                                            placeholder="jane@example.com"
-                                            className="w-full bg-cream-100 border border-gold-200/50 rounded-xl px-6 py-4 text-charcoal-800 placeholder-charcoal-700/40 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400/50 transition-all font-serif"
-                                        />
+                                    <div>
+                                        <label className="block text-xs uppercase tracking-wider text-charcoal-700/60 mb-2 ml-2">Jumlah Tamu (Termasuk Anda)</label>
+                                        <div className="flex items-center gap-4 bg-cream-100 rounded-2xl p-2 border border-gold-200/50">
+                                            <button
+                                                onClick={() => setFormData(prev => ({ ...prev, guests: Math.max(1, prev.guests - 1) }))}
+                                                className="w-12 h-12 rounded-xl bg-cream-200 text-charcoal-800 hover:bg-cream-300 transition-colors flex items-center justify-center"
+                                            >
+                                                -
+                                            </button>
+                                            <span className="flex-1 text-center font-mono text-xl text-charcoal-800">{Math.max(1, formData.guests)}</span>
+                                            <button
+                                                onClick={() => setFormData(prev => ({ ...prev, guests: Math.min(5, prev.guests + 1) }))}
+                                                className="w-12 h-12 rounded-xl bg-cream-200 text-charcoal-800 hover:bg-cream-300 transition-colors flex items-center justify-center"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         )}
 
-                        {/* STEP 1: ATTENDANCE */}
+                        {/* STEP 1: SUCCESS */}
                         {step === 1 && (
-                            <div className="space-y-6">
-                                <div className="text-center mb-8">
-                                    <h2 className="text-3xl font-script text-emerald-700 mb-2">Apakah Anda akan hadir?</h2>
-                                    <p className="text-charcoal-700/60 text-sm font-light">Kami sangat berharap dapat merayakan bersama Anda.</p>
-                                </div>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <button
-                                        onClick={() => setFormData({ ...formData, attending: 'yes' })}
-                                        className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col items-center gap-3 ${formData.attending === 'yes'
-                                            ? 'bg-emerald-100 text-emerald-700 border-emerald-400 shadow-emerald scale-[1.02]'
-                                            : 'bg-cream-100 text-charcoal-700/60 border-gold-200/50 hover:border-gold-300'
-                                            }`}
-                                    >
-                                        <span className="text-3xl">✨</span>
-                                        <span className="font-medium">Hadir</span>
-                                    </button>
-                                    <button
-                                        onClick={() => setFormData({ ...formData, attending: 'no' })}
-                                        className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col items-center gap-3 ${formData.attending === 'no'
-                                            ? 'bg-rose-100 text-rose-700 border-rose-300'
-                                            : 'bg-cream-100 text-charcoal-700/60 border-gold-200/50 hover:border-gold-300'
-                                            }`}
-                                    >
-                                        <span className="text-3xl">😔</span>
-                                        <span className="font-medium">Maaf, Tidak Bisa</span>
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* STEP 2: DETAILS */}
-                        {step === 2 && (
-                            <div className="space-y-6">
-                                {formData.attending === 'yes' ? (
-                                    <>
-                                        <div className="text-center mb-8">
-                                            <h2 className="text-2xl font-script text-emerald-700 mb-2">Detail Tambahan</h2>
-                                            <p className="text-charcoal-700/60 text-sm">Bantu kami mempersiapkan yang terbaik untuk Anda.</p>
-                                        </div>
-                                        <div className="space-y-4">
-                                            <div>
-                                                <label className="block text-xs uppercase tracking-wider text-charcoal-700/60 mb-2 ml-2">Jumlah Tamu (Termasuk Anda)</label>
-                                                <div className="flex items-center gap-4 bg-cream-100 rounded-2xl p-2 border border-gold-200/50">
-                                                    <button
-                                                        onClick={() => setFormData(prev => ({ ...prev, guests: Math.max(1, prev.guests - 1) }))}
-                                                        className="w-12 h-12 rounded-xl bg-cream-200 text-charcoal-800 hover:bg-cream-300 transition-colors flex items-center justify-center"
-                                                    >
-                                                        -
-                                                    </button>
-                                                    <span className="flex-1 text-center font-mono text-xl text-charcoal-800">{Math.max(1, formData.guests)}</span>
-                                                    <button
-                                                        onClick={() => setFormData(prev => ({ ...prev, guests: Math.min(5, prev.guests + 1) }))}
-                                                        className="w-12 h-12 rounded-xl bg-cream-200 text-charcoal-800 hover:bg-cream-300 transition-colors flex items-center justify-center"
-                                                    >
-                                                        +
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className="text-center py-10">
-                                        <p className="text-charcoal-700 mb-4">Kami akan merindukan kehadiran Anda!</p>
-                                        <p className="text-charcoal-700/60 text-sm">Silakan tinggalkan pesan di bagian ucapan.</p>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-
-                        {/* STEP 4: SUCCESS */}
-                        {step === 4 && (
                             <div className="text-center py-10">
                                 <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,28 +188,17 @@ export const RSVPModal: React.FC<RSVPModalProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Footer Controls */}
-                {step < 4 && (
-                    <div className="p-6 border-t border-gold-200/50 bg-cream-100 flex justify-between items-center">
-                        {step > 0 ? (
-                            <button
-                                onClick={() => setStep(prev => prev - 1)}
-                                className="text-sm text-charcoal-700/60 hover:text-charcoal-800 transition-colors px-4 py-2"
-                            >
-                                Kembali
-                            </button>
-                        ) : (
-                            <div></div>
-                        )}
-
+                {step === 0 && (
+                    <div className="p-6 border-t border-gold-200/50 bg-cream-100 flex justify-end items-center">
                         <button
-                            onClick={step === 2 ? handleSubmit : handleNext}
-                            disabled={step === 0 && !formData.name}
-                            className={`px-8 py-3 rounded-full font-medium text-sm transition-all ${(step === 0 && !formData.name)
+                            onClick={handleSubmit}
+                            disabled={!formData.name}
+                            className={`px-8 py-3 rounded-full font-medium text-sm transition-all ${!formData.name
                                 ? 'bg-cream-200 text-charcoal-700/40 cursor-not-allowed'
                                 : 'bg-emerald-600 text-white hover:bg-emerald-700 hover:scale-105 active:scale-95 shadow-emerald'
                                 }`}
                         >
-                            {step === 2 ? 'Kirim Konfirmasi' : 'Lanjut'}
+                            Kirim Konfirmasi
                         </button>
                     </div>
                 )}

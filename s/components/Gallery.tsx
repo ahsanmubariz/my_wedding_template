@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { GALLERY_IMAGES } from '../constants';
 import { IslamicCorner } from './Ornaments';
+import { LazyImage } from './LazyImage';
 
 export const Gallery: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -84,12 +85,11 @@ export const Gallery: React.FC = () => {
                             </div>
 
                             {/* Inner image for parallax */}
-                            <div className="gallery-img-inner w-full h-full will-change-transform">
-                                <img
+                            <div className="gallery-img-inner w-full h-full will-change-transform relative">
+                                <LazyImage
                                     src={img.url}
                                     alt={img.caption}
                                     className="w-full h-full object-cover origin-center"
-                                    loading="lazy"
                                 />
                             </div>
 

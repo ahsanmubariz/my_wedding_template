@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import musicFile from '../33x.mp3';
 
 export const MusicPlayer: React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef<HTMLAudioElement>(null);
+    const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
+
+    const musicFile = `${ASSETS_BASE_URL}song.mp3`;
 
     useEffect(() => {
         const audio = audioRef.current;

@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onRSVP }) => {
                 {/* Footer Credits */}
                 <div className="mt-24 text-xs text-charcoal-700/40 font-serif">
                     <p className="italic">Didesain dengan ♥ untuk Shinta & Ahsan</p>
-                    <p className="mt-2 font-sans text-charcoal-700/30">© 2026 - Ahsan Jipiti</p>
+                    <p className="mt-2 font-sans text-charcoal-700/30">© 2026 - Ahsan Gravity</p>
                 </div>
             </div>
         </footer>

@@ -32,12 +32,12 @@ export const BANK_DETAILS = [
 export const GALLERY_IMAGES: GalleryImage[] = [
     {
         id: 1,
-        url: `${ASSETS_BASE_URL}IMG_9588.JPEG`,
+        url: `${ASSETS_BASE_URL}IMG_9588.jpg`,
         caption: ''
     },
     {
         id: 2,
-        url: `${ASSETS_BASE_URL}IMG_9721.jpg`,
+        url: `${ASSETS_BASE_URL}IMG_9581.jpg`,
         caption: ''
     },
     {
@@ -47,22 +47,31 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     },
     {
         id: 4,
-        url: `${ASSETS_BASE_URL}IMG_9592.JPEG`,
+        url: `${ASSETS_BASE_URL}IMG_9592.jpg`,
         caption: ''
     },
     {
         id: 5,
-        url: `${ASSETS_BASE_URL}IMG_9581.JPEG`,
+        url: `${ASSETS_BASE_URL}IMG_9721.jpg`,
         caption: ''
     },
     {
         id: 6,
-        url: `${ASSETS_BASE_URL}IMG_9704.JPEG`,
+        url: `${ASSETS_BASE_URL}IMG_9704.jpg`,
         caption: ''
     },
     {
         id: 7,
-        url: `${ASSETS_BASE_URL}IMG_9685.JPEG`,
+        url: `${ASSETS_BASE_URL}IMG_9685.jpg`,
+        caption: ''
+    },
+    {
+        id: 8,
+        url: `${ASSETS_BASE_URL}IMG_9681.jpg`,
+        caption: ''
+    }, {
+        id: 7,
+        url: `${ASSETS_BASE_URL}IMG_0079.jpg`,
         caption: ''
     }
 
@@ -85,14 +94,14 @@ export const MOCK_WISHES: Wish[] = [
 
 export const RUNDOWN_ITEMS = [
     {
-        time: '08:00',
+        time: '07:00',
         title: 'Akad Nikah',
         location: 'Desa Cipinang, Kec. Rajagaluh, Kab. Majalengka',
         description: 'Prosesi sakral pengucapan ijab qabul dengan ridho Allah SWT.'
     },
     {
         time: '11:00',
-        title: 'Resepsi Siang',
+        title: 'Resepsi',
         location: 'Desa Cipinang, Kec. Rajagaluh, Kab. Majalengka',
         description: 'Walimatul ursy bersama keluarga dan kerabat terdekat.'
     }

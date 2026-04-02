@@ -71,3 +71,28 @@ h6 {
 .font-display {
   font-family: 'Cinzel', serif;
 }
+
+/* Skeleton Shimmer (Dark Mode) */
+@keyframes skeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    #09090b 0%,
+    #18181b 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    #18181b 75%,
+    #09090b 100%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s ease-in-out infinite;
+  border-radius: inherit;
+}

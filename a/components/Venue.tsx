@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { GridPattern } from './Ornaments';
+import { LazyImage } from './LazyImage';
 
 const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
 
@@ -82,11 +83,10 @@ export const Venue: React.FC = () => {
       >
         {/* Map Image */}
         <div className="absolute inset-0 bg-zinc-800 pointer-events-none">
-          <img
+          <LazyImage
             src={`${ASSETS_BASE_URL}bsw.png`}
             alt="Balai Sidang Bosowa 45"
             className="w-full h-full object-cover opacity-50 grayscale-[20%] md:group-hover:grayscale-0 md:group-hover:scale-105 transition-all duration-1000 will-change-transform"
-            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent"></div>
         </div>

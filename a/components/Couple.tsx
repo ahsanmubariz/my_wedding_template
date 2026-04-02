@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { LazyImage } from './LazyImage';
 
 const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
 
@@ -85,11 +86,10 @@ export const Couple: React.FC = () => {
           {/* Jane */}
           <div ref={brideRef} className="flex-1 max-w-md text-center md:text-right group">
             <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900 shadow-2xl">
-              <img
+              <LazyImage
                 src={`${ASSETS_BASE_URL}san.jpg`}
                 alt="Ahsan Mubariz"
                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 grayscale-[30%] md:hover:grayscale-0 will-change-transform"
-                loading="lazy"
               />
               <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-end p-8">
               </div>
@@ -106,11 +106,10 @@ export const Couple: React.FC = () => {
           {/* John */}
           <div ref={groomRef} className="flex-1 max-w-md text-center md:text-left group">
             <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900 shadow-2xl">
-              <img
+              <LazyImage
                 src={`${ASSETS_BASE_URL}sh.jpg`}
                 alt="Shinta Oktaviani"
                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 grayscale-[30%] md:hover:grayscale-0 will-change-transform"
-                loading="lazy"
               />
               <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-start p-8">
               </div>

@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArabesqueBorder, GridPattern } from './Ornaments';
+import { LazyImage } from './LazyImage';
 
 const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
 
@@ -82,11 +83,10 @@ export const Venue: React.FC = () => {
             >
                 {/* Map Image */}
                 <div className="absolute inset-0 bg-cream-200 pointer-events-none">
-                    <img
+                    <LazyImage
                         src={`${ASSETS_BASE_URL}552018_110749222410387_144635804_n.jpg`}
                         alt="Majalengka"
                         className="w-full h-full object-cover opacity-60 md:group-hover:opacity-80 md:group-hover:scale-105 transition-all duration-1000 will-change-transform"
-                        loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-cream-50 via-cream-50/30 to-transparent"></div>
                 </div>
@@ -104,7 +104,7 @@ export const Venue: React.FC = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-lg md:text-xl font-display font-medium text-charcoal-800 leading-tight">Kediaman Bapak H. Jeje Zaenudin</h3>
+                                <h3 className="text-lg md:text-xl font-display font-medium text-charcoal-800 leading-tight">Kediaman Mempelai Wanita</h3>
                                 <p className="text-charcoal-700/70 text-xs md:text-sm mt-2 leading-relaxed font-serif">Jl. K. Saleh I<br />Desa Cipinang, Rajagaluh, Majalengka</p>
                             </div>
                         </div>
