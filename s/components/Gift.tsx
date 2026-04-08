@@ -33,9 +33,9 @@ export const Gift: React.FC = () => {
                             </div>
 
                             {/* Chip & Bank Logo */}
-                            <div className="flex justify-between items-start">
+                            <div className="flex justify-left items-start">
                                 <div className="w-12 h-9 rounded-md bg-gradient-to-tr from-emerald-500 via-emerald-400 to-emerald-600 shadow-md border border-emerald-400/30"></div>
-                                <span className="font-bold text-emerald-700 italic tracking-wider text-lg font-display">{bank.bankName}</span>
+                                <span className="font-bold text-emerald-700 italic tracking-wider text-lg font-display pl-2">{bank.bankName}</span>
                             </div>
 
                             {/* Number */}

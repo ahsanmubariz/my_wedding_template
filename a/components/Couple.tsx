@@ -116,7 +116,7 @@ export const Couple: React.FC = () => {
             </div>
             <h3 className="text-4xl md:text-5xl font-display font-medium text-white mb-4">Shinta Oktaviani Jaenudin, S.Farm.</h3>
             <p className="text-zinc-400 leading-relaxed font-serif text-lg italic opacity-80">
-              Putri pertama dari Bapak H. Jeje Zaenudin & Ibu Hj. Ida Saidah.
+              Putri pertama dari Bapak H. Jeje Zaenudin & Ibu Hj. Idah Saidah.
             </p>
           </div>
 
