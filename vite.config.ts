@@ -34,8 +34,22 @@ export default defineConfig(({ mode }) => {
               res.setHeader('Location', `/statistics/${search}`);
               res.end();
               return;
+            } else if (path === '/a/invite') {
+              res.statusCode = 301;
+              res.setHeader('Location', `/a/invite/${search}`);
+              res.end();
+              return;
+            } else if (path === '/s/invite') {
+              res.statusCode = 301;
+              res.setHeader('Location', `/s/invite/${search}`);
+              res.end();
+              return;
             } else if (path === '/a/') {
               req.url = `/a/index.html${search}`;
+            } else if (path === '/a/invite/') {
+              req.url = `/a/invite/index.html${search}`;
+            } else if (path === '/s/invite/') {
+              req.url = `/s/invite/index.html${search}`;
             } else if (path === '/s/') {
               req.url = `/s/index.html${search}`;
             } else if (path === '/statistics/') {
@@ -51,6 +65,8 @@ export default defineConfig(({ mode }) => {
         input: {
           main: path.resolve(__dirname, 'index.html'),
           a: path.resolve(__dirname, 'a/index.html'),
+          invite: path.resolve(__dirname, 'a/invite/index.html'),
+          invite_s: path.resolve(__dirname, 's/invite/index.html'),
           s: path.resolve(__dirname, 's/index.html'),
           statistics: path.resolve(__dirname, 'statistics/index.html'),
         },

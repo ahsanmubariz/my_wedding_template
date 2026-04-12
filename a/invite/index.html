@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="%VITE_ASSETS_BASE_URL%favicon.ico" />
+  <title>Invitation Generator | Ahsan & Shinta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            display: ['Cinzel', 'serif'],
+          },
+          colors: {
+            zinc: {
+              850: '#1f1f22',
+              900: '#18181b',
+              950: '#09090b',
+            },
+            gold: {
+              50: '#fbf8eb',
+              100: '#f5efcd',
+              200: '#ebde9b',
+              300: '#dec663',
+              400: '#d4af37',
+              500: '#b69129',
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/a/invite/index.css">
+</head>
+
+<body class="bg-zinc-950 text-zinc-50 font-sans antialiased">
+  <div id="root"></div>
+  <script type="module" src="/a/invite/index.tsx"></script>
+</body>
+
+</html>
