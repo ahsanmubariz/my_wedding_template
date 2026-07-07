@@ -70,7 +70,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
         url: `${ASSETS_BASE_URL}IMG_9681.jpg`,
         caption: ''
     }, {
-        id: 7,
+        id: 9,
         url: `${ASSETS_BASE_URL}IMG_0079.jpg`,
         caption: ''
     }

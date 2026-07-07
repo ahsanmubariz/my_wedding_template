@@ -57,6 +57,7 @@ export const Loader: React.FC<LoaderProps> = ({ onOpen }) => {
         }
     }, [isVideoReady]);
 
+
     const handleOpen = () => {
         // Track visit
         addDoc(collection(db, 'visits_s'), {

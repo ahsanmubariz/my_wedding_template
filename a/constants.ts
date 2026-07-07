@@ -20,26 +20,87 @@ export const BANK_DETAILS = [
   }
 ];
 
+// ...existing code...
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop',
-    caption: 'The Proposal'
+    url: `${ASSETS_BASE_URL}IMG_9588.jpg`,
+    caption: ''
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1511285560982-1356c11d4606?q=80&w=2076&auto=format&fit=crop',
-    caption: 'First Trip'
+    url: `${ASSETS_BASE_URL}IMG_9721.jpg`,
+    caption: ''
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop',
-    caption: 'Paris'
+    url: `${ASSETS_BASE_URL}DSC04974.jpg`,
+    caption: ''
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1522673607200-1645062cd958?q=80&w=2043&auto=format&fit=crop',
-    caption: 'The Future'
+    url: `${ASSETS_BASE_URL}mycover.jpg`,
+    caption: ''
+  },
+  {
+    id: 5,
+    url: `${ASSETS_BASE_URL}IMG_9685.jpg`,
+    caption: ''
+  },
+  {
+    id: 6,
+    url: `${ASSETS_BASE_URL}DSC05547.jpg`,
+    caption: ''
+  },
+  {
+    id: 7,
+    url: `${ASSETS_BASE_URL}IMG_9681.jpg`,
+    caption: ''
+  },
+  {
+    id: 8,
+    url: `${ASSETS_BASE_URL}IMG_0079.jpg`,
+    caption: ''
+  },
+  {
+    id: 9,
+    url: `${ASSETS_BASE_URL}ft1.png`,
+    caption: ''
+  },
+  {
+    id: 10,
+    url: `${ASSETS_BASE_URL}ft2.png`,
+    caption: ''
+  },
+  {
+    id: 11,
+    url: `${ASSETS_BASE_URL}ft3.png`,
+    caption: ''
+  },
+  {
+    id: 12,
+    url: `${ASSETS_BASE_URL}ft4.png`,
+    caption: ''
+  },
+  {
+    id: 13,
+    url: `${ASSETS_BASE_URL}ft5.png`,
+    caption: ''
+  },
+  {
+    id: 14,
+    url: `${ASSETS_BASE_URL}ft6.png`,
+    caption: ''
+  },
+  {
+    id: 15,
+    url: `${ASSETS_BASE_URL}ft7.png`,
+    caption: ''
+  },
+  {
+    id: 16,
+    url: `${ASSETS_BASE_URL}ft8.png`,
+    caption: ''
   }
 ];
 
