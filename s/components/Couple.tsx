@@ -106,16 +106,16 @@ export const Couple: React.FC = () => {
                             </div>
 
                             <LazyImage
-                                src={`${ASSETS_BASE_URL}sh.jpg`}
-                                alt="Shinta"
+                                src={`${ASSETS_BASE_URL}bride.jpg`}
+                                alt="Sarah Carter"
                                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 will-change-transform"
                             />
                             <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-cream-50/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-8">
                             </div>
                         </div>
-                        <h3 className="text-4xl md:text-5xl font-script text-emerald-700 mb-4">Shinta Oktaviani Jaenudin, S.Farm.</h3>
+                        <h3 className="text-4xl md:text-5xl font-script text-emerald-700 mb-4">Sarah Carter</h3>
                         <p className="text-charcoal-700/70 leading-relaxed font-serif text-lg italic">
-                            Putri pertama dari Bapak H. Jeje Zaenudin & Ibu Hj. Idah Saidah
+                            Putri dari Bapak David Carter & Ibu Linda Carter
                         </p>
                     </div>
 
@@ -144,16 +144,16 @@ export const Couple: React.FC = () => {
                             </div>
 
                             <LazyImage
-                                src={`${ASSETS_BASE_URL}san.jpg`}
-                                alt="Ahsan"
+                                src={`${ASSETS_BASE_URL}groom.jpg`}
+                                alt="John Carter"
                                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 will-change-transform"
                             />
                             <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-cream-50/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-8">
                             </div>
                         </div>
-                        <h3 className="text-4xl md:text-5xl font-script text-emerald-700 mb-4">Ahsan Mubariz, S.Tr.T.</h3>
+                        <h3 className="text-4xl md:text-5xl font-script text-emerald-700 mb-4">John Carter</h3>
                         <p className="text-charcoal-700/70 leading-relaxed font-serif text-lg italic">
-                            Putra kedua dari Alm. Bapak H. Bahrum & Ibu Hj. Darmawati H.
+                            Putra dari Bapak Robert Carter & Ibu Maria Carter
                         </p>
                     </div>
 

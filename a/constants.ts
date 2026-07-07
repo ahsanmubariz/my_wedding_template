@@ -1,10 +1,10 @@
 import { GalleryImage, Wish } from './types';
 
-const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
+const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.example.com/';
 
-export const WEDDING_DATE = '2026-06-02T11:00:00+08:00';
+export const WEDDING_DATE = '2026-12-12T11:00:00+07:00';
 
-export const GOOGLE_CALENDAR_LINK = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ahsan+%26+Shinta+Wedding&dates=20260602T110000/20260602T130000&Bismillahirrahmanirrahim.+Dengan+memohon+rahmat+Allah+SWT,+kami+mengundang+Anda+untuk+merayakan+pernikahan+kami.&location=Balai+Sidang+Bosowa+45,+Makassar&sf=true&output=xml";
+export const GOOGLE_CALENDAR_LINK = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=John+%26+Sarah+Wedding&dates=20261212T110000/20261212T130000&details=With+the+blessings+of+our+families,+we+invite+you+to+celebrate+our+wedding.&location=Grand+Ballroom,+Jakarta&sf=true&output=xml";
 
 export const QURAN_VERSE = {
   arabic: "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً",
@@ -14,92 +14,107 @@ export const QURAN_VERSE = {
 
 export const BANK_DETAILS = [
   {
-    bankName: "Bank Mandiri",
-    accountNumber: "1520031802479",
-    accountName: "Ahsan Mubariz"
+    bankName: "Bank Central Asia (BCA)",
+    accountNumber: "1234567890",
+    accountName: "John Carter"
   }
 ];
 
-// ...existing code...
+export const RUNDOWN_ITEMS = [
+    {
+        time: '08:00',
+        date: '10 Mei 2026',
+        title: 'Akad Nikah',
+        location: 'Desa A, Bandung',
+        description: 'Prosesi sakral pengucapan janji suci pernikahan.'
+    },
+    {
+        time: '11:00',
+        date: '10 Juni 2026',
+        title: 'Resepsi',
+        location: 'Gedung XYZ, Jakarta',
+        description: 'Ramah tamah dan perayaan bersama keluarga dan kerabat terdekat.'
+    }
+];
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: 1,
-    url: `${ASSETS_BASE_URL}IMG_9588.jpg`,
+    url: `${ASSETS_BASE_URL}a.jpg`,
     caption: ''
   },
   {
     id: 2,
-    url: `${ASSETS_BASE_URL}IMG_9721.jpg`,
+    url: `${ASSETS_BASE_URL}b.jpg`,
     caption: ''
   },
   {
     id: 3,
-    url: `${ASSETS_BASE_URL}DSC04974.jpg`,
+    url: `${ASSETS_BASE_URL}c.jpg`,
     caption: ''
   },
   {
     id: 4,
-    url: `${ASSETS_BASE_URL}mycover.jpg`,
+    url: `${ASSETS_BASE_URL}d.jpg`,
     caption: ''
   },
   {
     id: 5,
-    url: `${ASSETS_BASE_URL}IMG_9685.jpg`,
+    url: `${ASSETS_BASE_URL}e.jpg`,
     caption: ''
   },
   {
     id: 6,
-    url: `${ASSETS_BASE_URL}DSC05547.jpg`,
+    url: `${ASSETS_BASE_URL}f.jpg`,
     caption: ''
   },
   {
     id: 7,
-    url: `${ASSETS_BASE_URL}IMG_9681.jpg`,
+    url: `${ASSETS_BASE_URL}g.jpg`,
     caption: ''
   },
   {
     id: 8,
-    url: `${ASSETS_BASE_URL}IMG_0079.jpg`,
+    url: `${ASSETS_BASE_URL}h.jpg`,
     caption: ''
   },
   {
     id: 9,
-    url: `${ASSETS_BASE_URL}ft1.png`,
+    url: `${ASSETS_BASE_URL}i.png`,
     caption: ''
   },
   {
     id: 10,
-    url: `${ASSETS_BASE_URL}ft2.png`,
+    url: `${ASSETS_BASE_URL}j.png`,
     caption: ''
   },
   {
     id: 11,
-    url: `${ASSETS_BASE_URL}ft3.png`,
+    url: `${ASSETS_BASE_URL}k.png`,
     caption: ''
   },
   {
     id: 12,
-    url: `${ASSETS_BASE_URL}ft4.png`,
+    url: `${ASSETS_BASE_URL}l.png`,
     caption: ''
   },
   {
     id: 13,
-    url: `${ASSETS_BASE_URL}ft5.png`,
+    url: `${ASSETS_BASE_URL}m.png`,
     caption: ''
   },
   {
     id: 14,
-    url: `${ASSETS_BASE_URL}ft6.png`,
+    url: `${ASSETS_BASE_URL}n.png`,
     caption: ''
   },
   {
     id: 15,
-    url: `${ASSETS_BASE_URL}ft7.png`,
+    url: `${ASSETS_BASE_URL}o.png`,
     caption: ''
   },
   {
     id: 16,
-    url: `${ASSETS_BASE_URL}ft8.png`,
+    url: `${ASSETS_BASE_URL}p.png`,
     caption: ''
   }
 ];

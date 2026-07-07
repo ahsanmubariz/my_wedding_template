@@ -2,23 +2,7 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-const RUNDOWN_ITEMS = [
-    {
-        time: '08:00',
-        date: '18 Mei 2026',
-        title: 'Akad Nikah',
-        location: 'Desa Cipinang, Rajagaluh, Majalengka',
-        description: 'Prosesi sakral pengucapan janji suci pernikahan.'
-    },
-    {
-        time: '11:00',
-        date: '2 Juni 2026',
-        title: 'Resepsi Makan Siang',
-        location: 'Balai Sidang Bosowa 45, Makassar',
-        description: 'Ramah tamah dan perayaan bersama keluarga dan kerabat terdekat.'
-    }
-];
+import { RUNDOWN_ITEMS } from '../constants';
 
 export const Rundown: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

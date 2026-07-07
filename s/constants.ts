@@ -1,10 +1,10 @@
 import { GalleryImage, Wish } from './types';
 
-const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
+const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.example.com/';
 
-export const WEDDING_DATE = '2026-05-18T18:00:00';
+export const WEDDING_DATE = '2026-12-12T18:00:00';
 
-export const GOOGLE_CALENDAR_LINK = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Shinta+%26+Ahsan&dates=20260518T180000/20260518T230000&details=Bismillahirrahmanirrahim.+Dengan+memohon+rahmat+Allah+SWT,+kami+mengundang+Anda+untuk+merayakan+pernikahan+kami.&location=Desa+Cipinang,+Majalengka&sf=true&output=xml";
+export const GOOGLE_CALENDAR_LINK = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Sarah+%26+John&dates=20261212T180000/20261212T230000&details=Dengan+memohon+rahmat+Allah+SWT,+kami+mengundang+Anda+untuk+merayakan+pernikahan+kami.&location=Kediaman+Mempelai,+Bandung&sf=true&output=xml";
 
 export const QURAN_VERSE = {
     arabic: "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً",
@@ -18,13 +18,13 @@ export const BISMILLAH = "بِسْمِ اللَّهِ الرَّحْمَنِ ا�
 export const BANK_DETAILS = [
     {
         bankName: "Bank Rakyat Indonesia (BRI)",
-        accountNumber: "131801008402509",
-        accountName: "Shinta Oktaviani Jaenudin"
+        accountNumber: "123401005678901",
+        accountName: "Sarah Carter"
     }
     , {
         bankName: "Seabank",
-        accountNumber: "901613315665",
-        accountName: "Shinta Oktaviani Jaenudin"
+        accountNumber: "901623345678",
+        accountName: "Sarah Carter"
     }
 
 ];
@@ -32,46 +32,46 @@ export const BANK_DETAILS = [
 export const GALLERY_IMAGES: GalleryImage[] = [
     {
         id: 1,
-        url: `${ASSETS_BASE_URL}IMG_9588.jpg`,
+        url: `${ASSETS_BASE_URL}a.jpg`,
         caption: ''
     },
     {
         id: 2,
-        url: `${ASSETS_BASE_URL}IMG_9581.jpg`,
+        url: `${ASSETS_BASE_URL}b.jpg`,
         caption: ''
     },
     {
         id: 3,
-        url: `${ASSETS_BASE_URL}IMG_9683.jpg`,
+        url: `${ASSETS_BASE_URL}c.jpg`,
         caption: ''
     },
     {
         id: 4,
-        url: `${ASSETS_BASE_URL}IMG_9592.jpg`,
+        url: `${ASSETS_BASE_URL}d.jpg`,
         caption: ''
     },
     {
         id: 5,
-        url: `${ASSETS_BASE_URL}IMG_9721.jpg`,
+        url: `${ASSETS_BASE_URL}e.jpg`,
         caption: ''
     },
     {
         id: 6,
-        url: `${ASSETS_BASE_URL}IMG_9704.jpg`,
+        url: `${ASSETS_BASE_URL}f.jpg`,
         caption: ''
     },
     {
         id: 7,
-        url: `${ASSETS_BASE_URL}IMG_9685.jpg`,
+        url: `${ASSETS_BASE_URL}g.jpg`,
         caption: ''
     },
     {
         id: 8,
-        url: `${ASSETS_BASE_URL}IMG_9681.jpg`,
+        url: `${ASSETS_BASE_URL}h.jpg`,
         caption: ''
     }, {
         id: 9,
-        url: `${ASSETS_BASE_URL}IMG_0079.jpg`,
+        url: `${ASSETS_BASE_URL}i.jpg`,
         caption: ''
     }
 
@@ -94,15 +94,15 @@ export const MOCK_WISHES: Wish[] = [
 
 export const RUNDOWN_ITEMS = [
     {
-        time: '07:00',
+        time: '08:00',
         title: 'Akad Nikah',
-        location: 'Desa Cipinang, Kec. Rajagaluh, Kab. Majalengka',
+        location: 'Kediaman Mempelai, Bandung',
         description: 'Prosesi sakral pengucapan ijab qabul dengan ridho Allah SWT.'
     },
     {
-        time: '11:00',
+        time: '12:00',
         title: 'Resepsi',
-        location: 'Desa Cipinang, Kec. Rajagaluh, Kab. Majalengka',
+        location: 'Kediaman Mempelai, Bandung',
         description: 'Walimatul ursy bersama keluarga dan kerabat terdekat.'
     }
 ];

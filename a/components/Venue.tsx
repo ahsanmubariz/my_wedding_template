@@ -84,8 +84,8 @@ export const Venue: React.FC = () => {
         {/* Map Image */}
         <div className="absolute inset-0 bg-zinc-800 pointer-events-none">
           <LazyImage
-            src={`${ASSETS_BASE_URL}bsw.png`}
-            alt="Balai Sidang Bosowa 45"
+            src={`${ASSETS_BASE_URL}venue.jpg`}
+            alt="Grand Ballroom Jakarta"
             className="w-full h-full object-cover opacity-50 grayscale-[20%] md:group-hover:grayscale-0 md:group-hover:scale-105 transition-all duration-1000 will-change-transform"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent"></div>
@@ -104,14 +104,14 @@ export const Venue: React.FC = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-display font-medium text-white leading-tight">Balai Sidang Bosowa 45</h3>
-                <p className="text-zinc-300 text-xs md:text-sm mt-2 leading-relaxed font-serif">Jl. Urip Sumoharjo Km.4, Makassar</p>
+                <h3 className="text-lg md:text-xl font-display font-medium text-white leading-tight">Grand Ballroom Jakarta</h3>
+                <p className="text-zinc-300 text-xs md:text-sm mt-2 leading-relaxed font-serif">Jl. Sudirman Kav. 1, Jakarta</p>
               </div>
             </div>
           </div>
 
           {/* Action Button */}
-          <button className="w-full md:w-auto bg-white text-black hover:bg-gold-50 px-8 py-4 rounded-full font-bold transition-all active:scale-95 shadow-lg flex items-center justify-center gap-2 group/btn" onClick={() => window.open('https://maps.app.goo.gl/B7sTjcAzxrPrCsWv7', '_blank')}>
+          <button className="w-full md:w-auto bg-white text-black hover:bg-gold-50 px-8 py-4 rounded-full font-bold transition-all active:scale-95 shadow-lg flex items-center justify-center gap-2 group/btn" onClick={() => window.open('https://maps.app.goo.gl/example', '_blank')}>
             <span className="font-display tracking-widest text-sm uppercase">Petunjuk Arah</span>
             <svg className="group-hover/btn:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />

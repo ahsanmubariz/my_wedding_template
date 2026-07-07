@@ -32,8 +32,8 @@ export const Footer: React.FC<FooterProps> = ({ onRSVP }) => {
         </div>
 
         <div className="mt-24 text-xs text-zinc-800 font-serif italic">
-          <p>Didesain dengan ♥ untuk Ahsan & Shinta</p>
-          <p className="mt-2 no-italic font-sans text-zinc-900">© 2026 - Ahsan Jipiti</p>
+          <p>Didesain dengan ♥ untuk John & Sarah</p>
+          <p className="mt-2 no-italic font-sans text-zinc-900">© 2026 - The iWed Experience</p>
         </div>
       </div>
     </footer>

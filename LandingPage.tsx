@@ -25,7 +25,7 @@ const LandingPage: React.FC = () => {
                         Welcome to
                     </span>
                     <h1 className="text-5xl md:text-7xl font-display text-gradient-gold mb-6">
-                        Shinta & Ahsan Wedding Invitation
+                        Your Wedding Invitation
                     </h1>
                     <p className="text-zinc-400 font-serif italic text-xl md:text-2xl max-w-2xl mx-auto">
                         Choose your preferred luxury digital invitation experience.
@@ -40,7 +40,7 @@ const LandingPage: React.FC = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative z-10">
                             <h2 className="text-3xl font-display text-zinc-100 mb-4 group-hover:text-gold-400 transition-colors">
-                                Makassar Venue
+                                Dark Theme
                             </h2>
                             <p className="text-zinc-400 font-sans mb-8">
                                 A dark, modern, and deeply elegant single-page experience with smooth GSAP scrolling.
@@ -60,7 +60,7 @@ const LandingPage: React.FC = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative z-10">
                             <h2 className="text-3xl font-display text-zinc-100 mb-4 group-hover:text-emerald-400 transition-colors">
-                                Majalengka Venue
+                                Islamic Theme
                             </h2>
                             <p className="text-zinc-400 font-sans mb-8">
                                 A vibrant, light, Islamic-themed design featuring elegant geometry, gold inserts, and nature tones.
@@ -108,7 +108,7 @@ const LandingPage: React.FC = () => {
                                 {/* Option A */}
                                 <div className="glass-strong p-6 rounded-2xl border border-white/5 space-y-4 hover:border-gold-400/30 transition-colors group/card">
                                     <div className="flex justify-between items-center">
-                                        <span className="text-[10px] text-gold-400 uppercase tracking-[0.2em] font-bold">Makassar Venue</span>
+                                        <span className="text-[10px] text-gold-400 uppercase tracking-[0.2em] font-bold">Dark Theme</span>
                                         <div className="w-1.5 h-1.5 rounded-full bg-gold-400" />
                                     </div>
                                     <div className="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-[11px] text-zinc-400 break-all leading-relaxed relative">
@@ -139,7 +139,7 @@ const LandingPage: React.FC = () => {
                                 {/* Option S */}
                                 <div className="glass-strong p-6 rounded-2xl border border-white/5 space-y-4 hover:border-emerald-400/30 transition-colors group/card">
                                     <div className="flex justify-between items-center">
-                                        <span className="text-[10px] text-emerald-400 uppercase tracking-[0.2em] font-bold">Majalengka Venue</span>
+                                        <span className="text-[10px] text-emerald-400 uppercase tracking-[0.2em] font-bold">Islamic Theme</span>
                                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                                     </div>
                                     <div className="bg-black/40 p-4 rounded-xl border border-white/5 font-mono text-[11px] text-zinc-400 break-all leading-relaxed">
@@ -174,7 +174,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             <footer className="absolute bottom-8 text-center w-full text-zinc-600 font-sans text-sm z-10">
-                &copy; {new Date().getFullYear()} Ahsan Jipiti. All rights reserved.
+                &copy; {new Date().getFullYear()} The iWed Experience. All rights reserved.
             </footer>
         </main>
     );

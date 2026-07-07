@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { GOOGLE_CALENDAR_LINK } from '../constants';
 import { generateShareCardA } from '../../utils/shareCard';
 
-const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
+const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || "";
 
 interface HeroProps {
   onRSVP: () => void;
@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
   const handleShareNow = useCallback(async () => {
     if (!sharePreview) return;
 
-    const file = new File([sharePreview.blob], 'undangan-ahsan-shinta.png', { type: 'image/png' });
+    const file = new File([sharePreview.blob], 'undangan-john-sarah.png', { type: 'image/png' });
 
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       try {
@@ -120,11 +120,11 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
               Perayaan Pernikahan
             </p>
             <h1 className="text-7xl md:text-9xl font-display font-medium tracking-tight text-white drop-shadow-2xl mix-blend-overlay opacity-90">
-              Ahsan
+              John
               <span className="block text-4xl md:text-6xl font-serif italic text-gold-400 font-normal my-6 opacity-80">
                 &
               </span>
-              Shinta
+              Sarah
             </h1>
             {recipientName && (
               <div className="mt-12 mb-4 flex flex-col items-center z-20">
@@ -136,9 +136,9 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
             <div className={`${recipientName ? 'mt-8' : 'mt-16'} flex flex-col md:flex-row items-center gap-6`}>
               {/* Date Pill */}
               <div className="flex items-center gap-6 text-zinc-200 text-xs md:text-sm tracking-widest uppercase font-medium glass px-8 py-4 rounded-full">
-                <span>2 Juni 2026</span>
+                <span>12 Desember 2026</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
-                <span>Makassar</span>
+                <span>Jakarta</span>
               </div>
 
               <div className="flex gap-4">

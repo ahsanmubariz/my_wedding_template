@@ -8,15 +8,15 @@ Yth. Bapak/Ibu/Saudara/i *[Nama Penerima]*,
 
 Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyampaikan kabar bahagia sekaligus mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami:
 
-*_Ahsan Mubariz & Shinta Oktaviani J._*
+*_John Carter & Sarah Carter_*
 
 Yang InsyaAllah akan diselenggarakan pada:
 
-Hari/Tanggal: Senin, 18 Mei 2026
+Hari/Tanggal: Sabtu, 12 Desember 2026
 
 Waktu: 11:00 - Selesai
 
-Tempat: Desa Cipinang, Kec. Rajagaluh, Kab. Majalengka
+Tempat: Kediaman Mempelai, Bandung
 
 Tanpa mengurangi rasa hormat, detail rangkaian acara dan petunjuk lokasi dapat diakses melalui tautan undangan digital berikut:
 
@@ -29,7 +29,7 @@ Atas perhatian dan doa restunya, kami ucapkan terima kasih.
 Wassalamu’alaikum Warahmatullahi Wabarakatuh.
 
 Hormat kami,
-*_Ahsan & Shinta_*`;
+*_John & Sarah_*`;
 
 const App: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'generate' | 'settings'>('generate');
@@ -90,7 +90,7 @@ const App: React.FC = () => {
         <div className="min-h-screen p-4 md:p-8 flex flex-col items-center max-w-2xl mx-auto islamic-pattern">
             <header className="w-full mb-8 text-center">
                 <h1 className="text-3xl font-display text-emerald-700 mb-2">Invitation Generator (S)</h1>
-                <p className="text-zinc-500 text-sm tracking-widest uppercase">For Ahsan & Shinta (Majalengka)</p>
+                <p className="text-zinc-500 text-sm tracking-widest uppercase">For John & Sarah (Islamic Theme)</p>
             </header>
 
             <div className="w-full glass rounded-3xl overflow-hidden shadow-soft">
@@ -174,7 +174,7 @@ const App: React.FC = () => {
             </div>
 
             <footer className="mt-8 text-zinc-400 text-[10px] uppercase tracking-[0.2em]">
-                &copy; 2026 Ahsan & Shinta Wedding
+                &copy; 2026 John & Sarah Wedding
             </footer>
         </div>
     );

@@ -144,7 +144,7 @@ export async function generateShareCardA(recipientName?: string | null): Promise
   // Groom name
   ctx.font = '500 120px "Cinzel", serif';
   ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-  ctx.fillText('Ahsan', CARD_WIDTH / 2, y);
+  ctx.fillText('John', CARD_WIDTH / 2, y);
 
   y += 100;
 
@@ -158,7 +158,7 @@ export async function generateShareCardA(recipientName?: string | null): Promise
   // Bride name
   ctx.font = '500 120px "Cinzel", serif';
   ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-  ctx.fillText('Shinta', CARD_WIDTH / 2, y);
+  ctx.fillText('Sarah', CARD_WIDTH / 2, y);
 
   y += 100;
 
@@ -182,7 +182,7 @@ export async function generateShareCardA(recipientName?: string | null): Promise
   // Date
   ctx.font = '500 30px "Cinzel", serif';
   ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
-  drawCenteredText(ctx, '2 JUNI 2026', y, 8);
+  drawCenteredText(ctx, '12 DESEMBER 2026', y, 8);
 
   y += 50;
 
@@ -194,12 +194,12 @@ export async function generateShareCardA(recipientName?: string | null): Promise
   // Location
   ctx.font = '500 30px "Cinzel", serif';
   ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
-  drawCenteredText(ctx, 'MAKASSAR', y, 8);
+  drawCenteredText(ctx, 'JAKARTA', y, 8);
 
   // Bottom URL
   ctx.font = '400 22px "Inter", sans-serif';
   ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
-  ctx.fillText('shintahsan.my.id', CARD_WIDTH / 2, CARD_HEIGHT - 80);
+  ctx.fillText('your-wedding.example.com', CARD_WIDTH / 2, CARD_HEIGHT - 80);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob(
@@ -270,7 +270,7 @@ export async function generateShareCardS(recipientName?: string | null): Promise
   // Bride name (Script)
   ctx.font = '400 130px "Great Vibes", cursive';
   ctx.fillStyle = '#047857';
-  ctx.fillText('Shinta', CARD_WIDTH / 2, y);
+  ctx.fillText('Sarah', CARD_WIDTH / 2, y);
 
   y += 90;
 
@@ -284,7 +284,7 @@ export async function generateShareCardS(recipientName?: string | null): Promise
   // Groom name (Script)
   ctx.font = '400 130px "Great Vibes", cursive';
   ctx.fillStyle = '#047857';
-  ctx.fillText('Ahsan', CARD_WIDTH / 2, y);
+  ctx.fillText('John', CARD_WIDTH / 2, y);
 
   y += 100;
 
@@ -309,7 +309,7 @@ export async function generateShareCardS(recipientName?: string | null): Promise
   // Date
   ctx.font = '500 30px "Cinzel", serif';
   ctx.fillStyle = 'rgba(39, 39, 42, 0.65)';
-  drawCenteredText(ctx, '18 MEI 2026', y, 8);
+  drawCenteredText(ctx, '12 DESEMBER 2026', y, 8);
 
   y += 50;
 
@@ -321,12 +321,12 @@ export async function generateShareCardS(recipientName?: string | null): Promise
   // Location
   ctx.font = '500 30px "Cinzel", serif';
   ctx.fillStyle = 'rgba(39, 39, 42, 0.65)';
-  drawCenteredText(ctx, 'MAJALENGKA', y, 8);
+  drawCenteredText(ctx, 'BANDUNG', y, 8);
 
   // Bottom URL
   ctx.font = '400 22px "Inter", sans-serif';
   ctx.fillStyle = 'rgba(39, 39, 42, 0.2)';
-  ctx.fillText('shintahsan.my.id', CARD_WIDTH / 2, CARD_HEIGHT - 80);
+  ctx.fillText('your-wedding.example.com', CARD_WIDTH / 2, CARD_HEIGHT - 80);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob(

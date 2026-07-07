@@ -87,16 +87,16 @@ export const Couple: React.FC = () => {
           <div ref={brideRef} className="flex-1 max-w-md text-center md:text-right group">
             <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900 shadow-2xl">
               <LazyImage
-                src={`${ASSETS_BASE_URL}san.jpg`}
-                alt="Ahsan Mubariz"
+                src={`${ASSETS_BASE_URL}groom.jpg`}
+                alt="John Carter"
                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 grayscale-[30%] md:hover:grayscale-0 will-change-transform"
               />
               <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-end p-8">
               </div>
             </div>
-            <h3 className="text-4xl md:text-5xl font-display font-medium text-white mb-4">Ahsan Mubariz, S.Tr.T.</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-medium text-white mb-4">John Carter</h3>
             <p className="text-zinc-400 leading-relaxed font-serif text-lg italic opacity-80">
-              Putra kedua dari Alm. Bapak H. Bahrum, S.E, M.Ak, Akt. & Ibu Prof. Dr. Hj. Darmawati H, M.HI.
+              Putra dari Bapak Robert Carter & Ibu Maria Carter.
             </p>
           </div>
 
@@ -107,16 +107,16 @@ export const Couple: React.FC = () => {
           <div ref={groomRef} className="flex-1 max-w-md text-center md:text-left group">
             <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900 shadow-2xl">
               <LazyImage
-                src={`${ASSETS_BASE_URL}sh.jpg`}
-                alt="Shinta Oktaviani"
+                src={`${ASSETS_BASE_URL}bride.jpg`}
+                alt="Sarah Carter"
                 className="w-full h-full object-cover transition-transform duration-1000 md:group-hover:scale-110 grayscale-[30%] md:hover:grayscale-0 will-change-transform"
               />
               <div className="mobile-overlay absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-start p-8">
               </div>
             </div>
-            <h3 className="text-4xl md:text-5xl font-display font-medium text-white mb-4">Shinta Oktaviani Jaenudin, S.Farm.</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-medium text-white mb-4">Sarah Carter</h3>
             <p className="text-zinc-400 leading-relaxed font-serif text-lg italic opacity-80">
-              Putri pertama dari Bapak H. Jeje Zaenudin & Ibu Hj. Idah Saidah.
+              Putri dari Bapak David Carter & Ibu Linda Carter.
             </p>
           </div>
 

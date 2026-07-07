@@ -84,8 +84,8 @@ export const Venue: React.FC = () => {
                 {/* Map Image */}
                 <div className="absolute inset-0 bg-cream-200 pointer-events-none">
                     <LazyImage
-                        src={`${ASSETS_BASE_URL}552018_110749222410387_144635804_n.jpg`}
-                        alt="Majalengka"
+                        src={`${ASSETS_BASE_URL}venue.jpg`}
+                        alt="Kediaman Mempelai, Bandung"
                         className="w-full h-full object-cover opacity-60 md:group-hover:opacity-80 md:group-hover:scale-105 transition-all duration-1000 will-change-transform"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-cream-50 via-cream-50/30 to-transparent"></div>
@@ -104,15 +104,15 @@ export const Venue: React.FC = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-lg md:text-xl font-display font-medium text-charcoal-800 leading-tight">Kediaman Mempelai Wanita</h3>
-                                <p className="text-charcoal-700/70 text-xs md:text-sm mt-2 leading-relaxed font-serif">Jl. K. Saleh I<br />Desa Cipinang, Rajagaluh, Majalengka</p>
+                                <h3 className="text-lg md:text-xl font-display font-medium text-charcoal-800 leading-tight">Kediaman Mempelai</h3>
+                                <p className="text-charcoal-700/70 text-xs md:text-sm mt-2 leading-relaxed font-serif">Jl. Contoh No. 10<br />Bandung</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Action Button */}
                     <a
-                        href="https://maps.app.goo.gl/TWkhRjKQ6eUyKu3V7"
+                        href="https://maps.app.goo.gl/example"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full md:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-bold transition-all active:scale-95 shadow-emerald flex items-center justify-center gap-2 group/btn"

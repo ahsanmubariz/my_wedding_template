@@ -6,7 +6,7 @@ import { GOOGLE_CALENDAR_LINK, BISMILLAH } from '../constants';
 import { BismillahHeader, IslamicStar8Point, ArabesqueBorder } from './Ornaments';
 import { generateShareCardS } from '../../utils/shareCard';
 
-const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || 'https://assets.shintahsan.my.id/';
+const ASSETS_BASE_URL = import.meta.env.VITE_ASSETS_BASE_URL || '';
 
 interface HeroProps {
     onRSVP: () => void;
@@ -69,13 +69,13 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
     const handleShareNow = useCallback(async () => {
         if (!sharePreview) return;
 
-        const file = new File([sharePreview.blob], 'undangan-shinta-ahsan.png', { type: 'image/png' });
+        const file = new File([sharePreview.blob], 'undangan-sarah-john.png', { type: 'image/png' });
 
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
             try {
                 await navigator.share({
                     files: [file],
-                    title: 'Undangan Pernikahan Shinta & Ahsan',
+                    title: 'Undangan Pernikahan Sarah & John',
                 });
             } catch {
                 // User cancelled — that's fine
@@ -128,11 +128,11 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
                         </p>
 
                         <h1 className="text-6xl md:text-8xl font-script text-emerald-700 drop-shadow-sm">
-                            Shinta
+                            Sarah
                             <span className="block text-3xl md:text-5xl font-display text-gold-500 font-normal my-4 md:my-6 tracking-widest">
                                 &
                             </span>
-                            Ahsan
+                            John
                         </h1>
 
                         {recipientName && (
@@ -148,9 +148,9 @@ export const Hero: React.FC<HeroProps> = ({ onRSVP }) => {
 
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             <div className="flex items-center gap-6 text-charcoal-700 text-xs md:text-sm tracking-widest uppercase font-medium glass px-8 py-4 rounded-full">
-                                <span>18 Mei 2026</span>
+                                <span>12 Desember 2026</span>
                                 <span className="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
-                                <span>Majalengka</span>
+                                <span>Bandung</span>
                             </div>
 
                             <div className="flex gap-4">

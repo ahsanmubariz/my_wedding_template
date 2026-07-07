@@ -110,11 +110,11 @@ export const Loader: React.FC<LoaderProps> = ({ onOpen }) => {
 
                 {/* Couple names */}
                 <h1 className="text-5xl md:text-7xl font-script text-emerald-700 mb-2">
-                    Shinta
+                    Sarah
                 </h1>
                 <span className="text-2xl md:text-3xl font-display text-gold-500 my-3 tracking-widest">&</span>
                 <h1 className="text-5xl md:text-7xl font-script text-emerald-700 mb-8">
-                    Ahsan
+                    John
                 </h1>
 
                 {/* Recipient name */}
